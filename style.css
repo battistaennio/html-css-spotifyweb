@@ -7,18 +7,27 @@
 /* REGOLE GENERALI */
 body{
     font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    color: white;
 }
 
 .flex{
     display: flex;
 }
 
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
 
 
 /* REGOLE MENU */
 #menu{
     background-color: #000000;
-    width: 250px;
+    width: 200px;
     height: calc(100vh - 80px);
     position: relative;
 }
@@ -30,7 +39,7 @@ body{
     margin: 10px;
 }
 
-nav{
+#menu-nav{
     /* debug */
     min-height: 100px;
     background-color: aqua;
@@ -39,7 +48,7 @@ nav{
 
 #playlist{
     /* debug */
-    min-height: 300px;
+    min-height: 50vh;
     background-color: aqua;
     margin: 10px;
 }
@@ -48,8 +57,8 @@ nav{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 250px;
     /* debug */
+    width: 200px;
     min-height: 40px;
     background-color: aqua;
 
@@ -60,10 +69,64 @@ nav{
 /* REGOLE MAIN */
 main{
     background-color: #141922;
-    width: calc(100vw - 250px);
+    width: calc(100vw - 200px);
     height: calc(100vh - 80px);
+    overflow-y: auto;
 }
 
+.row{
+    margin: 10px;
+    /* debug */
+    background-color: navy;
+}
+
+.row h2{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+#upgrade{
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.381);
+}
+
+#main-nav{
+}
+
+#main-nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#main-nav li{
+    font-size: 0.8rem;
+    flex-shrink: 0;
+/* debug */
+margin-top: 15px;
+
+}
+
+#main-nav a{
+    color: #75777c;
+    font-weight: 800;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+}
+
+main .box{
+    /* debug */
+    width: calc(100% / 6 - 10px);
+    min-height: 60px;
+    background-color: antiquewhite;
+}
+
+.box img{
+    width: 100%;
+}
 
 
 /* REGOLE PLAYER */
@@ -74,19 +137,81 @@ main{
     position: fixed;
     bottom: 0;
     left: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#song{
+    /* debug */
+    width: 200px;
+    height: 50px;
+    background-color: antiquewhite
+}
+
+#play{
+    /* debug */
+    width: 200px;
+    height: 50px;
+    background-color: antiquewhite
 }
 
 
+#volume{
+    /* debug */
+    width: 200px;
+    height: 50px;
+    background-color: antiquewhite
+}
 
-/* REGOLE VISUALIZZAZIONE SMARTPHONE */
+
+/* REGOLE VISUALIZZAZIONE MD */
+@media screen and (max-width:768px) {
+
+    /* REGOLE MAIN */
+    #main-nav ul{
+        flex-wrap: wrap;
+    }
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    main .box{
+        /* debug */
+        width: calc(100% / 4 - 10px);
+    }
+
+}
+
+
+/* REGOLE VISUALIZZAZIONE S */
+@media screen and (max-width:480px) {
+
+    /* REGOLE MAIN */
+
+    main .box{
+        /* debug */
+        width: calc(100% / 2 - 10px);
+    }
+
+
+}
+
+
+/* REGOLE VISUALIZZAZIONE XS */
 @media screen and (max-width:320px) {
+
+    /* REGOLE MAIN */
+    main{
+        width: calc(100vw - 50px);
+    }    
+            
+
+    /* REGOLE MENU */
     #menu{
         width: 50px;
     }
 
-    main{
-        width: calc(100vw - 50px);
-    }    
 
 }
 
