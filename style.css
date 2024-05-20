@@ -29,13 +29,17 @@ ul{
 #menu{
     background-color: #000000;
     color: #6d6d6d;
-    width: 200px;
+    width: 250px;
     height: calc(100vh - 80px);
     position: relative;
 }
 
 #logo{
     margin: 10px;
+}
+
+#logo-big{
+    width: 150px;
 }
 
 #logo-small{
@@ -49,8 +53,12 @@ ul{
     min-height: 100px;
 }
 
+#menu-nav li{
+    margin: 10px 0;
+}
+
 #menu-nav svg{
-    width: 35px;
+    width: 30px;
 }
 
 #menu-nav span{
@@ -58,7 +66,6 @@ ul{
 }
 
 #playlist{
-    /* debug */
     margin: 10px;
 }
 
@@ -84,8 +91,8 @@ ul{
 }
 
 #playlist h4{
-    font-size: 1rem;
-    margin: 15px 0;
+    font-size: 0.8rem;
+    margin: 20px 0;
 }
 
 #account{
@@ -93,16 +100,11 @@ ul{
     bottom: 0;
     left: 0;
     background-color: #000000;
-    /* debug */
-    width: 200px;
-    min-height: 40px;
+    width: 100%;
 }
 
 #account-container{
     margin: 10px;
-
-    /* debug */
-    min-height: 40px;
 }
 
 #download{
@@ -140,14 +142,10 @@ ul{
 }
 
 
-
-
-
-
 /* REGOLE MAIN */
 main{
     background-color: #141922;
-    width: calc(100vw - 200px);
+    width: calc(100vw - 250px);
     height: calc(100vh - 80px);
     overflow-y: auto;
 }
@@ -176,9 +174,8 @@ main{
 
 #main-nav li{
     font-size: 0.8rem;
-    flex-shrink: 0;
-/* debug */
-margin-top: 15px;
+    /* debug */
+    margin-top: 15px;
 
 }
 
@@ -200,6 +197,10 @@ main .box{
 
 .box img{
     width: 100%;
+}
+
+.box.circle img{
+    border-radius: 50%;
 }
 
 
@@ -239,7 +240,7 @@ main .box{
 
 
 /* REGOLE VISUALIZZAZIONE MD */
-@media screen and (max-width:768px) {
+@media screen and (max-width:1020px) {
 
     /* REGOLE MAIN */
     #main-nav ul{
@@ -259,7 +260,7 @@ main .box{
 
 
 /* REGOLE VISUALIZZAZIONE S */
-@media screen and (max-width:480px) {
+@media screen and (max-width:710px) {
 
     /* REGOLE MAIN */
 
@@ -273,7 +274,7 @@ main .box{
 
 
 /* REGOLE VISUALIZZAZIONE XS */
-@media screen and (max-width:320px) {
+@media screen and (max-width:506px) {
 
     /* REGOLE MENU */
     #menu{
