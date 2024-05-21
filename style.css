@@ -238,6 +238,28 @@ main .box{
     width: 100%;
 }
 
+.img-hover{
+    position: relative;
+}
+
+.box:hover img{
+    filter: brightness(0.5);
+    display: inline-block;
+}
+
+.box i{
+    display: none;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    translate: 50% -50%;
+}
+
+.box:hover i{
+    display: block;
+}
+
 .box h4{
     font-size: 1rem;
     margin: 10px 0;
