@@ -16,6 +16,11 @@ body{
     display: flex;
 }
 
+.flex-cntr{
+    display: flex;
+    align-items: center;
+}
+
 a{
     text-decoration: none;
 }
@@ -55,6 +60,7 @@ ul{
 
 #menu-nav li{
     margin: 10px 0;
+    height: 35px;
 }
 
 #menu-nav svg{
@@ -63,6 +69,7 @@ ul{
 
 #menu-nav span{
     font-size: 0.8rem;
+    margin-left: 5px;
 }
 
 #playlist{
@@ -77,6 +84,7 @@ ul{
 
 #new-playlist span{
     font-size: 1rem;
+    margin-left: 10px;
 }
 
 #playlist-container{
@@ -90,9 +98,10 @@ ul{
     font-size: 1.2rem;
 }
 
-#playlist h4{
+#playlist-container span{
     font-size: 0.8rem;
     margin: 20px 0;
+    display: block;
 }
 
 #account{
@@ -107,13 +116,15 @@ ul{
     margin: 10px;
 }
 
-#download{
+#download, #download span{
     margin: 10px 0;
 }
+
 
 #download svg{
     width: 20px;
 }
+
 
 #fake-border{
     height: 0.5px;
@@ -138,9 +149,11 @@ ul{
 #account-container span{
     color: white;
     margin-left: 10px;
-
 }
 
+#download span{
+    color: #6d6d6d;
+}
 
 /* REGOLE MAIN */
 main{
@@ -152,8 +165,6 @@ main{
 
 .row{
     margin: 10px;
-    /* debug */
-    background-color: navy;
 }
 
 .row h2{
@@ -162,8 +173,20 @@ main{
 }
 
 #upgrade{
-    height: 70px;
+    height: 60px;
     background-color: rgba(0, 0, 0, 0.381);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#button{
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 10px 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-right: 15px;
 }
 
 #main-nav ul{
@@ -189,14 +212,22 @@ main{
 }
 
 main .box{
-    /* debug */
     width: calc(100% / 6 - 10px);
-    min-height: 60px;
-    background-color: antiquewhite;
+    text-align: center;
 }
 
 .box img{
     width: 100%;
+}
+
+.box h4{
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.box span{
+    color: #6d6d6d;
+    font-size: 0.7rem;
 }
 
 .box.circle img{
@@ -225,7 +256,7 @@ main .box{
 
 #play{
     /* debug */
-    width: 200px;
+    width: 300px;
     height: 50px;
     background-color: antiquewhite
 }
