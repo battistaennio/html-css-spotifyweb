@@ -21,6 +21,12 @@ body{
     align-items: center;
 }
 
+.flex-cntr-sa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 a{
     text-decoration: none;
 }
@@ -240,18 +246,35 @@ main .box{
     background-color: #282828;
     height: 80px;
     width: 100vw;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     justify-content: space-between;
-    align-items: center;
 }
+
+.box-player{
+    margin: 10px;
+    }
+
+.box-player img{
+    width: 50px;
+}
+
+.box-player h5{
+    font-size: 0.8rem;
+}
+
+.box-player span{
+    color: #6d6d6d;
+    font-size: 0.6rem;
+}
+
+.box-player i{
+    margin: 5px;
+}
+
+
 
 #song{
     /* debug */
-    width: 200px;
-    height: 50px;
-    background-color: antiquewhite
+    height: 60px;
 }
 
 #play{
@@ -283,9 +306,12 @@ main .box{
     }
 
     main .box{
-        /* debug */
         width: calc(100% / 4 - 10px);
     }
+
+    .box h4{
+        font-size: 0.8rem;
+    }    
 
 }
 
