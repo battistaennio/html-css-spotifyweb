@@ -65,9 +65,8 @@ ul{
 }
 
 #menu-nav li{
-    margin: 10px 0;
-    height: 25px;
-    border-left: 5px solid transparent
+    border-left: 5px solid transparent;
+    display: inline-block;
 }
 
 .fake-border{
@@ -83,7 +82,15 @@ ul{
 #menu-nav svg{
     margin-left: 10px;
     width: 30px;
+    filter: invert(0.5);
 }
+
+#menu-nav li:hover svg, #menu-nav li:hover{
+    filter: invert(0);
+    color: white;
+    cursor: pointer;
+}
+
 
 #menu-nav span{
     font-size: 0.8rem;
@@ -99,9 +106,19 @@ ul{
     margin-top: 10px;
 }
 
+#new-playlist:hover span, #new-playlist:hover i{
+    color: white;
+    cursor: pointer;
+}
+
 #new-playlist span{
     font-size: 0.8rem;
     margin-left: 10px;
+}
+
+#playlist-container span:hover{
+    color: white;
+    cursor: pointer;
 }
 
 #playlist-container{
@@ -132,14 +149,21 @@ ul{
     margin: 15px;
 }
 
-#download, #download span{
+#download{
     margin: 10px 0;
+    display: inline-block;
 }
 
 #download svg{
     width: 20px;
+    filter: invert(0.5);
 }
 
+#download:hover svg, #download:hover span{
+    filter: invert(0);
+    cursor: pointer;
+    color: white;
+}
 
 #account-container .fake-border{
     height: 0.7px;
@@ -222,6 +246,10 @@ main{
 
 #main-nav a{
     color: #75777c;
+}
+
+#main-nav a:hover{
+    color: white;
 }
 
 .container{
@@ -505,6 +533,10 @@ main .box{
 
     .account-container #fake-border{
         display: none;
+    }
+
+    #account-logo_circle svg {
+        height: 70%;
     }
     
     
