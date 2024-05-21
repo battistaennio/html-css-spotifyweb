@@ -217,6 +217,11 @@ main{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100vw - 200px);
+    z-index: 900;
 }
 
 #button{
@@ -226,6 +231,15 @@ main{
     border: 1px solid white;
     border-radius: 15px;
     margin-right: 15px;
+}
+
+#button:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#main-nav{
+    margin-top: 70px;
 }
 
 #main-nav ul{
@@ -328,6 +342,16 @@ main .box{
     font-size: 0.75rem;
 }
 
+.box-player h5:hover {
+    cursor: pointer;
+}
+
+.box-player span:hover{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .box-player span{
     color: #6d6d6d;
     font-size: 0.65rem;
@@ -337,7 +361,11 @@ main .box{
     margin: 5px;
     color: #6d6d6d;
     font-size: 1rem;
+}
 
+.box-player i:hover{
+    color: white;
+    cursor: pointer;
 }
 
 #play{
@@ -358,6 +386,11 @@ main .box{
     margin: 0 20px;
     font-size: 1.5rem;
 }
+
+#play .box-player i:nth-child(3):hover{
+    scale: 1.2;
+}
+
 
 #fakeplayer{
     margin-top: 10px;
@@ -394,6 +427,15 @@ main .box{
     transform: translate(50%, calc(1px - 50%));
 }
 
+.listen-progress:hover .progress{
+    background-color: #9be52d;
+    cursor: pointer;
+}
+
+.listen-progress:hover{
+    cursor: pointer;
+}
+
 #volume-bar{
     display: flex;
     align-items: center;
@@ -406,6 +448,10 @@ main .box{
 #volume i{
     margin-left: 15px;
     font-size: 1rem;
+}
+
+#volume i:hover{
+    cursor: pointer;
 }
 
 
@@ -544,7 +590,11 @@ main .box{
     /* REGOLE MAIN */
     main{
         width: calc(100vw - 50px);
-    }    
+    }   
+    
+    #upgrade{
+        width: calc(100vw - 50px);
+    }
             
 
 }
