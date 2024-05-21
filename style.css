@@ -40,7 +40,7 @@ ul{
 #menu{
     background-color: #000000;
     color: #6d6d6d;
-    width: 250px;
+    width: 200px;
     height: calc(100vh - 80px);
     position: relative;
 }
@@ -59,17 +59,29 @@ ul{
 
 
 #menu-nav{
-    margin: 25px 10px;
+    margin: 25px 0;
     /* debug */
     min-height: 100px;
 }
 
 #menu-nav li{
     margin: 10px 0;
-    height: 35px;
+    height: 25px;
+    border-left: 5px solid transparent
+}
+
+.fake-border{
+    height: 3px;
+    margin: 7px 25%;
+    background-color: #9be52d;
+}
+
+#menu-nav li:first-child{
+    border-left: 5px solid #9be52d;
 }
 
 #menu-nav svg{
+    margin-left: 10px;
     width: 30px;
 }
 
@@ -79,34 +91,32 @@ ul{
 }
 
 #playlist{
-    margin: 10px;
+    margin: 15px;
 }
 
 #new-playlist{
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 10px;
-
 }
 
 #new-playlist span{
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-left: 10px;
 }
 
 #playlist-container{
+    min-height: 230px;
     overflow-y: auto;
-    /* debug */
-    max-height: 20vh;
 }
 
 #playlist h3{
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 #playlist-container span{
-    font-size: 0.8rem;
-    margin: 20px 0;
+    font-size: 0.7rem;
+    margin: 15px 0;
     display: block;
 }
 
@@ -119,21 +129,20 @@ ul{
 }
 
 #account-container{
-    margin: 10px;
+    margin: 15px;
 }
 
 #download, #download span{
     margin: 10px 0;
 }
 
-
 #download svg{
     width: 20px;
 }
 
 
-#fake-border{
-    height: 0.5px;
+#account-container .fake-border{
+    height: 0.7px;
     background-color: #6d6d6d;
     margin: 10px 0;
 }
@@ -164,7 +173,7 @@ ul{
 /* REGOLE MAIN */
 main{
     background-color: #141922;
-    width: calc(100vw - 250px);
+    width: calc(100vw - 200px);
     height: calc(100vh - 80px);
     overflow-y: auto;
 }
@@ -203,9 +212,12 @@ main{
 
 #main-nav li{
     font-size: 0.8rem;
-    /* debug */
     margin-top: 15px;
+}
 
+#main-nav span{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #9be52d;
 }
 
 #main-nav a{
@@ -247,6 +259,10 @@ main .box{
     height: 80px;
     width: 100vw;
     justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
 }
 
 .box-player{
@@ -259,37 +275,33 @@ main .box{
 }
 
 .box-player h5{
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .box-player span{
     color: #6d6d6d;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
 }
 
 .box-player i{
     margin: 5px;
-}
+    color: #6d6d6d;
+    font-size: 1rem;
 
-
-
-#song{
-    /* debug */
-    height: 60px;
 }
 
 #play{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* debug */
+    min-width: 170px;
     width: 40vw;
-    height: 50px;
 }
 
 #play .box-player i{
     font-size: 1.2rem;
     margin: 0 10px;
+    color: white;
 }
 
 #play .box-player i:nth-child(3){
@@ -343,6 +355,7 @@ main .box{
 
 #volume i{
     margin-left: 15px;
+    font-size: 1rem;
 }
 
 
@@ -353,6 +366,7 @@ main .box{
     #main-nav ul{
         flex-wrap: wrap;
     }
+
 
     .container{
         flex-wrap: wrap;
@@ -366,18 +380,62 @@ main .box{
         font-size: 0.8rem;
     }    
 
+    
+
+    /* REGOLE PLAYER */
+
 }
 
 
 /* REGOLE VISUALIZZAZIONE S */
 @media screen and (max-width:710px) {
 
+    /* regole */
+
     /* REGOLE MAIN */
+
+    #main-nav li{
+        font-size: 0.65rem;
+    }
+
+    .row h2{
+        font-size: 1.3rem;
+    }
 
     main .box{
         /* debug */
         width: calc(100% / 2 - 10px);
     }
+
+    /* REGOLE PLAYER */
+    #song .box-player:first-child{
+        display: none;
+    }
+
+    .box-player i{
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+
+    #volume i{
+        font-size: 0.8rem;
+        margin-left: 5px;
+    }  
+    
+    #play .box-player i{
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    #play .box-player i:nth-child(3){
+        font-size: 1.3rem;
+        margin: 0 10px;
+    }
+
+    .listen-progress{
+        margin: 0px 15px;
+    }
+
 
 
 }
@@ -423,7 +481,7 @@ main .box{
         display: none;
     }
 
-    #fake-border{
+    .account-container #fake-border{
         display: none;
     }
     
