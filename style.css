@@ -35,7 +35,7 @@ ul{
     background-color: #000000;
     color: #6d6d6d;
     width: 200px;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -57,7 +57,7 @@ ul{
 
     /* regole nav */
 #menu-nav{
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 #menu-nav li{
@@ -108,12 +108,12 @@ ul{
 
 #new-playlist span{
     font-size: 0.8rem;
-    margin-left: 10px;
+    padding: 12px;
 }
 
 #playlist-container{
     height: calc(55vh - 180px);
-    min-height: 133px;
+    min-height: 100px;
     overflow: auto;
 }
 
@@ -142,7 +142,7 @@ ul{
 
 
 #account-container{
-    margin: 15px;
+    margin: 5px 15px;
 }
 
 #download svg{
@@ -197,7 +197,7 @@ ul{
 main{
     background-color: #141922;
     width: calc(100vw - 200px);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     overflow-y: auto;
 }
 
@@ -324,7 +324,7 @@ main .box{
 /* REGOLE PLAYER */
 #player{
     background-color: #282828;
-    height: 80px;
+    height: 70px;
     width: 100vw;
     justify-content: space-between;
 }
@@ -383,6 +383,10 @@ main .box{
     color: white;
 }
 
+#play .box-player i:hover{
+    scale: 1.1;
+}
+
 #play .box-player i:nth-child(3){
     margin: 0 20px;
     font-size: 1.5rem;
@@ -391,7 +395,6 @@ main .box{
 #play .box-player i:nth-child(3):hover{
     scale: 1.2;
 }
-
 
 #fakeplayer{
     margin-top: 10px;
@@ -425,7 +428,7 @@ main .box{
     height: 10px;
     border-radius: 50%;
     background-color: white;
-    transform: translate(50%, calc(1px - 50%));
+    translate: 50% -30%;
 }
 
 .listen-progress:hover .progress{
@@ -454,8 +457,8 @@ main .box{
 
 #volume i:hover{
     cursor: pointer;
+    scale: 1.1;
 }
-
 
 /* REGOLE VISUALIZZAZIONE MD */
 @media screen and (max-width:1020px) {
@@ -477,7 +480,6 @@ main .box{
         font-size: 0.8rem;
     }    
 }
-
 
 /* REGOLE VISUALIZZAZIONE S */
 @media screen and (max-width:710px) {
@@ -521,10 +523,9 @@ main .box{
     }
 
     .listen-progress{
-        margin: 0px 15px;
+        margin: 0px 10px;
     }
 }
-
 
 /* REGOLE VISUALIZZAZIONE XS */
 @media screen and (max-width:506px) {
