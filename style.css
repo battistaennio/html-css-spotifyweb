@@ -31,16 +31,15 @@ ul{
 
 
 /* REGOLE MENU */
-#menu{
+#menu-container{
+    display: flex;
+    flex-wrap: wrap;
     background-color: #000000;
     color: #6d6d6d;
     width: 200px;
     height: calc(100vh - 70px);
     overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
 }
-
 
     /* regole logo */
 #logo{
@@ -531,10 +530,8 @@ main .box{
 @media screen and (max-width:506px) {
 
     /* REGOLE MENU */
-    #menu{
+    #menu-container{
         width: 50px;
-        display: block;
-        position: relative;
     }
 
     #logo-small{
@@ -560,12 +557,6 @@ main .box{
 
     #download{
         margin: 0 -1.5px;
-    }
-
-    #account{
-        position: absolute;
-        bottom: 0;
-        left: 0;
     }
 
     #account-container span{
